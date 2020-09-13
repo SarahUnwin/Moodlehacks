@@ -1,0 +1,11 @@
+<script>
+
+   $.get("https://moodle.bimm.co.uk/mod/forum/view.php?id=19339", function(data) {
+     var html = $( data );
+  	 var table = html.find("table.forumheaderlist");
+		 table.find("tr.discussion:nth-child(n+5)").remove();
+     table.css("width","100%");
+     $("#announcement-hack").append(table);
+  });
+</script>
+<div id="announcement-hack"></div>
